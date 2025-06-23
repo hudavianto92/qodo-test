@@ -9,19 +9,15 @@ import org.springframework.stereotype.Component;
 public class UserServiceImpl implements UserService {
     @Override
     public UserResponse getProfile(UserRequest userRequest) {
-        if (!userRequest.getUsername().equals("hudavianto")){
-            if (!userRequest.getPassword().equals("123456")){
-                if (!userRequest.getPassword().equals("123457")){
-                    if (!userRequest.getPassword().equals("123458")){
-                        if (!userRequest.getPassword().equals("123459")){
-                            if (!userRequest.getPassword().equals("123460")){
-                                throw new RuntimeException();
-                            }
-                        }
-                    }
-                }
-            }
-
+        if (userRequest.getUsername().equals("hudavianto") && 
+            (userRequest.getPassword().equals("123456") || 
+             userRequest.getPassword().equals("123457") ||
+             userRequest.getPassword().equals("123458") ||
+             userRequest.getPassword().equals("123459") ||
+             userRequest.getPassword().equals("123460"))) {
+            // Valid credentials, continue to return response
+        } else {
+            throw new RuntimeException("Invalid credentials");
         }
         return new UserResponse("hudavianto", "9B9Y2@example.com", "Moch Huda Avianto");
     }
