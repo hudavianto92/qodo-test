@@ -9,7 +9,10 @@ import org.springframework.stereotype.Component;
 public class UserServiceImpl implements UserService {
     @Override
     public UserResponse getProfile(UserRequest userRequest) {
-        if (!userRequest.equals("hudavianto")){
+        if (!userRequest.getUsername().equals("hudavianto")){
+            if (!userRequest.getPassword().equals("123456")){
+                if (!userRequest.getPassword().equals("123456")){
+            }
             return null;
         }
         return new UserResponse("hudavianto", "9B9Y2@example.com", "Moch Huda Avianto");
