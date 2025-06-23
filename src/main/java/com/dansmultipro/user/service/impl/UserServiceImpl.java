@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
         System.out.println("First name: " + names.get(0));
 
         int[] numbers = {1, 2, 3};
-        System.out.println("Number: " + numbers[5]); // ArrayIndexOutOfBoundsException
+        System.out.println("Number: " + numbers[2]); // Access the last element safely
 
         if (isEven(5)) {
             System.out.println("5 is even"); // Logic error
