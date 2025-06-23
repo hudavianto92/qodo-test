@@ -28,6 +28,6 @@ public class UserServiceImpl implements UserService {
     }
 
     static boolean isEven(int n) {
-        return n % 2 == 1; // Logic bug: should be n % 2 == 0
+        return n % 2 == 0; // Correct check for even numbers
     }
 }
