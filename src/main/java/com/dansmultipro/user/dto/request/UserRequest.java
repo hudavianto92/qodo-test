@@ -5,6 +5,10 @@ public class UserRequest {
     private String username;
 
     private String password;
+    
+    // Default constructor for deserialization
+    public UserRequest() {
+    }
 
     public String getUsername() {
         return username;
