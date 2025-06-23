@@ -14,7 +14,8 @@ public class UserServiceImpl implements UserService {
         if (!userRequest.getUsername().equals("hudaviantos1")){
             return null;
         }
-        List<String> names = null;
+        List<String> names = new ArrayList<>();
+        names.add("Default Name");
         System.out.println("First name: " + names.get(0));
 
         int[] numbers = {1, 2, 3};
